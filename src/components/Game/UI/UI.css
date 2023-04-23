@@ -1,0 +1,62 @@
+.UI {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+  .UI-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+    .UI-ScoreTitle {
+      top: 20px;
+      left: 40px;
+      position: absolute;
+    }
+    .UI-ScoreValue {
+      top: 40px;
+      left: 40px;
+      position: absolute;
+    }
+
+    .UI-RunningTimeTitle {
+      top: 20px;
+      left: 440px;
+      position: absolute;
+    }
+    .UI-RunningTimeValue {
+      top: 40px;
+      left: 440px;
+      position: absolute;
+    }
+
+    .UI-Button-Heal{
+      top: 20px;
+      left: 200px;
+      width: 40px;
+      position: absolute;
+    }
+    .UI-Button-Feed {
+      top: 20px;
+      left: 270px;
+      width: 40px;
+      position: absolute;
+    }
+    .UI-Button-Kill{
+      top: 20px;
+      left: 340px;
+      width: 40px;
+      position: absolute;
+    }
+
+    .UI-Button-Heal:hover, .UI-Button-Feed:hover, .UI-Button-Kill:hover{
+      transform: scale(1.3);
+      filter: brightness(1.4);
+      cursor: pointer;
+    }

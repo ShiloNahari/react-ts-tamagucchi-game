@@ -1,0 +1,22 @@
+.Land{
+  overflow: hidden;
+}
+
+.Land-scrolling-image {
+  background: url('../../../../public/images/game/land620.png') repeat-x;
+  height: 750px;
+  width: 7680px;
+  animation: slide 12s linear infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translate(0px, 310px);
+  }
+  50% {
+    transform: translate(-620px, 300px);
+  }
+  100% {
+    transform: translate(-1240px, 310px);
+  }
+}
+
