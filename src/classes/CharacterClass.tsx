@@ -46,7 +46,7 @@ export default class CharacterClass {
   }
 
   //functions
-  // feed √, heal √, die
+  // feed √, heal √, die √
   public feed(amount: number) {
     console.log(this._fed);
     
@@ -68,7 +68,7 @@ export default class CharacterClass {
     }else {
       this._healthMultipliar = 1
     }
-    if (this._health + (amount*this._healthMultipliar) >= 100) {
+    if ((this._health + (amount*this._healthMultipliar)) >= 100) {
       this._health = 100
     } else {
       this._health += (amount*this._healthMultipliar)
@@ -84,14 +84,20 @@ export default class CharacterClass {
     this._isAlive = false
   }
 
+  public revive(){
+    this._health = 100
+    this._fed = 100
+    this._isAlive = true
+    
+  }
+
   public show() {
     return (
       <div>
         {
-          (this._isAlive) ? 
-            <img src={this._images.alive} alt=""/>
-            :
-          <img src={this._images.dead} alt=""/>
+          (this._isAlive) 
+          ?<img src={this._images.alive} alt=""/>
+          :<img src={this._images.dead} alt=""/>
         }
       </div>
     )
