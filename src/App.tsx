@@ -19,6 +19,10 @@ function App() {
     myGame.start();
     setGamePhase(myGame.phase)
   }
+  const restartGame = ():void => {
+    handleStartGame();
+    
+  }
 
   const handleGameOver = () => {
     console.log('Game over! :(');
@@ -36,7 +40,7 @@ function App() {
         )
       case 'ended':
         return (<>
-          <GameOver score={myGame.score} playTime={myGame.startDate} fHandleStartGame={handleStartGame}/>
+          <GameOver score={myGame.score} playTime={myGame.startDate} fHandleStartGame={restartGame}/>
         </>
         )
       default:

@@ -9,10 +9,7 @@ import UI from "./UI/UI"
 let gameTick: NodeJS.Timer
 const myChar = new CharacterClass()
 
-export default function Game(props: {
-  game: GameClass
-  fHandleGameOver: () => void
-}) {
+export default function Game(props: { game: GameClass, fHandleGameOver: () => void }) {
   const { game, fHandleGameOver } = props
   //game tick(ticker)
   const [tick, setTick] = useState(false)
@@ -26,10 +23,12 @@ export default function Game(props: {
   return (
     <div className="Game">
       <UI game={game} char={myChar} fHandleGameOver={fHandleGameOver} />
-      <Character char={myChar} fHandleGameOver={fHandleGameOver}/>
+      <Character char={myChar} fHandleGameOver={fHandleGameOver} />
       <Land></Land>
-      <button type="button" onClick={()=>fHandleGameOver()}>End Game</button>
-      {/*TODO char */}    
+      <button type="button" onClick={() => fHandleGameOver()}>
+        End Game
+      </button>
+      {/*TODO char */}
     </div>
   )
 }
